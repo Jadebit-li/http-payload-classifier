@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Dataset - downloaded, not tracked
+data/
+
+# Trained models - generated, not tracked
+*.pkl
+models/
