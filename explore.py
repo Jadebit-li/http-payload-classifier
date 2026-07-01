@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 df = pd.read_csv("data/payload_full.csv")
 print(df.shape)
@@ -35,3 +36,15 @@ print (y_test.value_counts(normalize = True))
 
 print(X_train.iloc[0])
 print(y_train.iloc[0])
+
+vectorizer = TfidfVectorizer(
+    analyzer='char',
+    ngram_range=(1,4),
+    max_features=10000
+)
+
+X_train_vec = vectorizer.fit_transform(X_train)
+X_test_vec = vectorizer.transform(X_test)
+
+print(X_train_vec.shape)
+print(X_test_vec.shape)
