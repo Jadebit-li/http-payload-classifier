@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+import joblib
 
 df = pd.read_csv("data/payload_full.csv")
 print(df.shape)
@@ -63,3 +64,6 @@ print(y_pred)
 print (accuracy_score(y_test, y_pred))
 print (classification_report(y_test, y_pred))
 print (confusion_matrix(y_test, y_pred))
+
+joblib.dump(vectorizer, "models/vectorizer.pkl")
+joblib.dump(model, "models/model.pkl")
