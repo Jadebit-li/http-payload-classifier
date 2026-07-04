@@ -6,6 +6,10 @@ This system vectorizes payloads into a high-dimensional character feature space 
 
 ---
 
+## Demo
+![Uploading Screen Recording 2026-07-04 at 11.41.47 PM.gif…]()
+
+
 ## Technical Architecture & Core Stack
 
 * **Layer Focus:** Layer 7 (Application Layer Protocol Security)
