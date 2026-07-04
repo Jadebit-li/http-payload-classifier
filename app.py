@@ -15,5 +15,10 @@ if st.button("Classify"):
     confidence = model.predict_proba(payload_vec)[0][1]
 
     label = "Malicious" if prediction[0] == 1 else "Benign"
-    st.markdown(f"### Result: {label}")
-    st.markdown(f"Confidence(malicious): {confidence:.2%}")
+    color = "#c0392b" if label == "Malicious" else "#3d9970"
+    st.markdown(f"""
+    <div style="background-color:{color}; padding:10px 16px; border-radius:10px; max-width: 400px">
+        <h2 style="color:white; margin:0;">{label}</h2>
+        <p style="color:white; margin:5px 0 0 0;">Malicious Probability: {confidence:.2%}</p>
+    </div>
+""", unsafe_allow_html=True)
