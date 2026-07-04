@@ -2,7 +2,14 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.metrics import (
+    classification_report,
+    confusion_matrix,
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score
+)
 import joblib
 
 df = pd.read_csv("data/payload_full.csv")
@@ -58,12 +65,28 @@ model = LogisticRegression(
 model.fit(X_train_vec, y_train)
 
 y_pred = model.predict(X_test_vec)
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
 
 print(y_pred)
 
-print (accuracy_score(y_test, y_pred))
+print("Accuracy :", accuracy)
+print("Precision:", precision)
+print("Recall   :", recall)
+print("F1 Score :", f1)
 print (classification_report(y_test, y_pred))
 print (confusion_matrix(y_test, y_pred))
+
+metrics = {
+    "accuracy": accuracy,
+    "precision": precision,
+    "recall": recall,
+    "f1": f1
+}
+
+joblib.dump(metrics, "models/metrics.pkl")
 
 joblib.dump(vectorizer, "models/vectorizer.pkl")
 joblib.dump(model, "models/model.pkl")
