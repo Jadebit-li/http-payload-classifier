@@ -4,7 +4,9 @@ A binary ML classifier that detects malicious HTTP payloads using character-leve
 
 ## Demo
 
-<img width="600" height="312" alt="Screen Recording 2026-07-04 at 11 41 47 PM" src="https://github.com/user-attachments/assets/f0b1f545-f07f-4be1-87fb-a661dbe365d5" />
+Streamlit app : [text](https://ai-was.streamlit.app)
+
+
 
 
 ## What it does
