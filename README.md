@@ -6,7 +6,7 @@ A binary ML classifier that detects malicious HTTP payloads using character-leve
 
 Streamlit app : [Live Demo](https://ai-was.streamlit.app)
 
-
+<img width="1280" height="720" alt="Screen Recording 2026-07-04 at 11 41 47 PM-2" src="https://github.com/user-attachments/assets/b66c7184-5a71-4f43-b9fd-5e129ad7e85e" />
 
 ---
 
