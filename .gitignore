@@ -221,6 +221,4 @@ __marimo__/
 data/
 
 # Trained models - generated, not tracked
-*.pkl
-models/
 .DS_Store
