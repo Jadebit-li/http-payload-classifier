@@ -4,10 +4,11 @@ A binary ML classifier that detects malicious HTTP payloads using character-leve
 
 ## Demo
 
-Streamlit app : [text](https://ai-was.streamlit.app)
+Streamlit app : [Live Demo](https://ai-was.streamlit.app)
 
 
 
+---
 
 ## What it does
 
